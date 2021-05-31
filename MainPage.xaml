@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="MyMail.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyMail"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="#2C5899" Loaded="Page_Loaded">
+
+    <Grid>
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        <Rectangle Fill="#2C5899" Stroke="#2C5899" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="2000" Margin="0,0,-634,0"/>
+        
+        <TextBlock Foreground="White" x:Name="pageTitle" Text="SEND AN E-MAIL" Style="{StaticResource HeaderTextBlockStyle}" 
+                        VerticalAlignment="Top" IsHitTestVisible="false" TextWrapping="NoWrap" Margin="90,26,-15,0" />
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,100,0,0">
+            <!--<Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,500">
+                <Image Height="200" Width="200" Margin="0,0,0,0" Source="/Assets/Square150x150Logo.scale-200.png" />
+            </Grid>-->
+
+            <Image Height="200" Width="200" Margin="0,0,0,450" Source="/Assets/AppIcon.png" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <TextBlock Foreground="White" Text="Email to:" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="500" Height="20" Margin="0,0,0,100"/>
+            <TextBlock Foreground="White" x:Name="EmailString" HorizontalAlignment="left" TextWrapping="Wrap" VerticalAlignment="Center" Width="Auto" Height="20" Margin="60,0,0,100"/>
+
+            <TextBlock Foreground="White" Text="Subject:" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="500" Height="20" Margin="0,50,0,100"/>
+            <TextBlock Foreground="White" x:Name="SubjectString" HorizontalAlignment="left" TextWrapping="Wrap" VerticalAlignment="Center" Width="Auto" Height="20" Margin="60,50,0,100"/>
+
+
+            <TextBox x:Name="EmailBody" HorizontalAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" AcceptsReturn="True" VerticalAlignment="Center" Width="500" Height="200" Margin="0,200,0,0"/>
+            <Button Foreground="White" x:Name="SendEmail" Content="Send..." Margin="400,500,0,0" Width="100"/>
+        </Grid>
+    </Grid>
+</Page>
